@@ -1,0 +1,18 @@
+version: '3'
+services:
+  python-sandbox:
+    build: .
+    image: python
+    tty: true
+    ports:
+      - 8100:8100
+  ruby-sandbox:
+    build: .
+    image: rubylang/ruby
+    tty: true
+    ports:
+      - 8101:8101
+まだ途中
+port開いてもアクセスできない。
+そもそも非同期で処理させる想定だからキューを拾うような仕組みが必要
+となるとrailsなどのwebサーバーを作る必要があるのかもしれない
